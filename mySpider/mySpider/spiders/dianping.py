@@ -19,6 +19,7 @@ class dianpingScrapy(CrawlSpider):
         Rule(SgmlLinkExtractor(allow=(r'dianping.com/deal/([\d]+)')), callback='myparse'),
         Rule(SgmlLinkExtractor(allow=(r'dianping.com/([\w]+)$')), follow=True),
         Rule(SgmlLinkExtractor(allow=(r'dianping.com/list/([\w]+)-category_([\d]+)$')), follow=True),
+        Rule(SgmlLinkExtractor(allow=(r'dianping.com/list/([\w]+)-category_([\d]+)\?pageIndex=([\d]+)$')), follow=True),
         #Rule(SgmlLinkExtractor(allow=(r'dianping.com/shop/([\d]+)')), follow=True),
     ]
 
@@ -31,3 +32,4 @@ class dianpingScrapy(CrawlSpider):
         filename = '../data/dianping/' + str(dealid) + '.html'
         with open(filename, 'wb') as f:
             f.write(response.body)
+
