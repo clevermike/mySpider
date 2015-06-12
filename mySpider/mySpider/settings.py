@@ -27,7 +27,7 @@ CONCURRENT_REQUESTS_PER_DOMAIN = 5
 
 #LOG_LEVEL = log.DEBUG
 #LOG_FILE = '../logs/mySpider.log'
-LOG_STDOUT = True
+#LOG_STDOUT = True
 
 DOWNLOADER_MIDDLEWARES = {
     'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': None,

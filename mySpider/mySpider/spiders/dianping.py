@@ -20,6 +20,10 @@ class dianpingScrapy(CrawlSpider):
         Rule(SgmlLinkExtractor(allow=(r'dianping.com/([\w]+)$')), follow=True),
         Rule(SgmlLinkExtractor(allow=(r'dianping.com/list/([\w]+)-category_([\d]+)$')), follow=True),
         Rule(SgmlLinkExtractor(allow=(r'dianping.com/list/([\w]+)-category_([\d]+)\?pageIndex=([\d]+)$')), follow=True),
+        Rule(SgmlLinkExtractor(allow=(r'dianping.com/wedding/([\w]+)-category_([\d]+)$')), follow=True),
+        Rule(SgmlLinkExtractor(allow=(r'dianping.com/wedding/([\w]+)-category_([\d]+)\?pageIndex=([\d]+)$')), follow=True),
+        Rule(SgmlLinkExtractor(allow=(r'dianping.com/goods/([\w]+)-category_([\d]+)$')), follow=True),
+        Rule(SgmlLinkExtractor(allow=(r'dianping.com/goods/([\w]+)-category_([\d]+)\?pageIndex=([\d]+)$')), follow=True),
         #Rule(SgmlLinkExtractor(allow=(r'dianping.com/shop/([\d]+)')), follow=True),
     ]
 
